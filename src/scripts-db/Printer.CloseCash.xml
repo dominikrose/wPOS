@@ -26,12 +26,12 @@
         <line></line>
         <line></line>
         <line size="1">
-            <text align ="center" bold="true" length="42">Close Cash Report</text>
+            <text align ="center" bold="true" length="42">Kassenabschluss</text>
         </line>
         <line></line>
         <line>
-           <text align ="left" bold="true" length="32">Payments Report</text>
-           <text align ="right" bold="true" length="10">Amount</text>
+           <text align ="left" bold="true" length="32">Report Zahlungen</text>
+           <text align ="right" bold="true" length="10">Betrag</text>
         </line>
         <line><text>------------------------------------------</text></line>
         #foreach ($line in $payments.getPaymentLines())
@@ -42,17 +42,17 @@
         #end
         <line><text>------------------------------------------</text></line>
         <line>
-            <text align ="left" length="32" bold="true">Total Sales</text>
+            <text align ="left" length="32" bold="true">Summe Verkäufe</text>
             <text align ="right" length="10" bold="true">${payments.printPaymentsTotal()}</text>
         </line>
         <line>
-            <text align ="left" length="22">Number of Payments:</text>
+            <text align ="left" length="22">Anzahl an Zahlungen:</text>
             <text align ="right" length="10">${payments.printPayments()}</text>
         </line>
         <line></line>
         <line>
-            <text align ="left" bold="true" length="32">Tax Analysis</text>
-            <text align ="right" bold="true" length="10">Amount</text>
+            <text align ="left" bold="true" length="32">Steueranalyse</text>
+            <text align ="right" bold="true" length="10">Menge</text>
         </line>
         <line><text>------------------------------------------</text></line>
         #foreach ($line in $payments.getSaleLines())
@@ -63,20 +63,20 @@
         #end
         <line><text>------------------------------------------</text></line>
         <line>
-            <text align ="left" length="32">Receipts:</text>
+            <text align ="left" length="32">Belege:</text>
             <text align ="right" length="10">${payments.printSales()}</text>
         </line>
         <line></line>
         <line size="1">
-            <text align ="left" length="32" bold="true">SubTotal</text>
+            <text align ="left" length="32" bold="true">Zwischensumme</text>
             <text align ="right" length="10" bold="true">${payments.printSalesBase()}</text>
         </line>
         <line size="1">
-            <text align ="left" length="32" bold="true">Taxes</text>
+            <text align ="left" length="32" bold="true">Steuern</text>
             <text align ="right" length="10" bold="true">${payments.printSalesTaxes()}</text>
         </line>
         <line size="1">
-            <text align ="left" length="32" bold="true">Totals</text>
+            <text align ="left" length="32" bold="true">Gesamtsumme</text>
             <text align ="right" length="10" bold="true">${payments.printSalesTotal()}</text>
         </line>
         <line><text>------------------------------------------</text></line>
@@ -85,15 +85,15 @@
             <text>${payments.printHost()}</text>
         </line>
         <line>
-            <text length="18">Sequence:</text>
+            <text length="18">Sequenz:</text>
             <text>${payments.printSequence()}</text>
         </line>
         <line>
-            <text length="18">Start Date:</text>
+            <text length="18">Startdatum:</text>
             <text>${payments.printDateStart()}</text>
         </line>
         <line>
-            <text length="18">End Date:</text>
+            <text length="18">Enddatum:</text>
             <text>${payments.printDateEnd()}</text>
         </line>
     </ticket>
